@@ -1,0 +1,96 @@
+
+
+.copy {
+ 
+  fill: rgb(124, 124, 124);
+}
+.copy:hover {
+  fill: #c6a72a;
+
+}
+
+.save {
+ 
+  fill: rgb(113, 113, 113);
+  fill: #ff949439;
+}
+.save:hover {
+  fill: #358653;
+}
+
+/* .hide-on-phone {
+
+  flex: "0.5" ;
+                      border-left: "1px solid #E2E1E5";
+                     padding: "12px";
+                    display: "flex";
+                    height: '100%';
+} */
+
+@media only screen and (max-width: 800px) {
+  .hide-on-phone {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hide-on-phone {
+    flex: '0.2'
+  }
+}
+
+/* The SIMPLE-TOAST - position it at the bottom and in the middle of the screen */
+#simpleToast {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 1%;
+  max-width: 20%;  /* Set a default minimum width */
+  margin-left: -9%; /* Divide value of min-width by 2 */
+  background-color: rgb(29, 29, 29); /* Background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 10px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 55%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+  font-family: monospace;
+  display: inline-flex;
+}
+#simpleToast span {
+  margin-left: -5px;
+  margin-top: 2px;
+
+}
+
+/* Show the SIMPLE-TOAST when clicking on a button (class added with JavaScript) */
+#simpleToast.show {
+  visibility: visible; /* Show the SIMPLE-TOAST */
+  /* Add animation: Take 0.5 seconds to fade in and out the SIMPLE-TOAST.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the SIMPLE-TOAST in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+
